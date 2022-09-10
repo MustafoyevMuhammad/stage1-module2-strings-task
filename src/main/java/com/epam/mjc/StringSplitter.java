@@ -13,6 +13,20 @@ public class StringSplitter {
      * @return List of substrings
      */
     public List<String> splitByDelimiters(String source, Collection<String> delimiters) {
-        throw new UnsupportedOperationException("You should implement this method.");
+        List<String> result = new ArrayList<>();
+        String temp = source;
+        for (String s : delimiters) {
+            StringTokenizer st = new StringTokenizer(source, s);
+            temp ="";
+            while(st.hasMoreTokens()){
+                temp = temp + st.nextToken() + " ";
+
+            }
+        }
+        StringTokenizer st2 = new StringTokenizer(temp, " ");
+        while (st2.hasMoreTokens()){
+            result.add(st2.nextToken());
+        }
+        return result;
     }
 }
