@@ -18,7 +18,7 @@ public class StringSplitter {
         List<String> result = new ArrayList<>();
         String temp = source;
         for (String s : delimiters) {
-            StringTokenizer st = new StringTokenizer(source, s);
+            StringTokenizer st = new StringTokenizer(temp, s);
             temp ="";
             while(st.hasMoreTokens()){
                 temp = temp + st.nextToken() + " ";
